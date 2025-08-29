@@ -1,4 +1,3 @@
-// src/screens/ResultScreen.tsx
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
