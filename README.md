@@ -44,3 +44,12 @@ git clone https://github.com/luanaxcardoso/SkinQuiz.git
 
 - npx expo start
 
+##  Teste de funcionamento pelo ExpoGo
+
+
+
+https://github.com/user-attachments/assets/1c7b8982-a5e1-4bb9-894e-96f87f8ad107
+
+
+
+
