@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
-import QuestionCard from '../components/QuestionCard';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import styles from './styleQuiz';
+import React, { useState } from "react";
+import { View } from "react-native";
+import QuestionCard from "../components/QuestionCard";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import styles from "../styles/styleQuiz";
 
 type Option = {
   label: string;
@@ -19,12 +19,11 @@ type RootStackParamList = {
   Result: { result: string };
 };
 
-type Props = NativeStackScreenProps<RootStackParamList, 'Quiz'>;
-
+type Props = NativeStackScreenProps<RootStackParamList, "Quiz">;
 
 const questions: Question[] = [
   {
-    question: "Sua pele costuma ficar oleosa na zona T (testa, nariz, queixo)?",
+    question: "Sua pele costuma ficar oleosa na zona T? \n(testa, nariz, queixo)",
     options: [
       { label: "Sempre", value: "oleosa" },
       { label: "Às vezes", value: "mista" },
@@ -89,8 +88,6 @@ const questions: Question[] = [
   },
 ];
 
-
-
 const QuizScreen: React.FC<Props> = ({ navigation }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<string[]>([]);
@@ -103,24 +100,22 @@ const QuizScreen: React.FC<Props> = ({ navigation }) => {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       const result = calculateResult(newAnswers);
-      navigation.navigate('Result', { result });
+      navigation.navigate("Result", { result });
     }
   };
 
-
   const calculateResult = (answers: string[]) => {
-  const counts: Record<string, number> = { oleosa: 0, mista: 0, seca: 0 };
-  answers.forEach(a => counts[a]++);
-  
-  const max = Math.max(...Object.values(counts));
-  const winners = Object.keys(counts).filter(k => counts[k] === max);
-  
-  return winners.length > 1 ? 'mista' : winners[0];
-};
+    const counts: Record<string, number> = { oleosa: 0, mista: 0, seca: 0 };
+    answers.forEach((a) => counts[a]++);
 
+    const max = Math.max(...Object.values(counts));
+    const winners = Object.keys(counts).filter((k) => counts[k] === max);
+
+    return winners.length > 1 ? "mista" : winners[0];
+  };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { justifyContent: "center", paddingVertical: 30 }]}>
       <QuestionCard
         question={questions[currentQuestion].question}
         options={questions[currentQuestion].options}
