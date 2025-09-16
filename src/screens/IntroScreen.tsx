@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text, TouchableOpacity, Image, Linking, StyleSheet } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import styles from "../styles/styleQuiz";
-import Icon from "react-native-vector-icons/FontAwesome";
+import { FontAwesome } from "@expo/vector-icons";
+
 
 type RootStackParamList = {
   Intro: undefined;
@@ -26,7 +27,7 @@ const IntroScreen: React.FC<Props> = ({ navigation }) => {
       <View style={localStyles.topBar}>
         <Text style={localStyles.clinicName}>Clínica La Belle</Text>
         <TouchableOpacity onPress={handleWhatsApp}>
-          <Icon name="whatsapp" size={24} color="#25D366" />
+        <FontAwesome name="whatsapp" size={40} color="green" />
         </TouchableOpacity>
       </View>
 

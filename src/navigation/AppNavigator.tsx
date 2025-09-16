@@ -14,7 +14,7 @@ export type RootStackParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppNavigator: React.FC = () => (
-  <NavigationContainer>
+  <NavigationContainer testID="navigation-container">
     <Stack.Navigator initialRouteName="Intro" id={undefined}>
       <Stack.Screen 
         name="Intro" 

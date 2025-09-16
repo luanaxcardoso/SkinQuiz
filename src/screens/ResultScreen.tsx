@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image, StyleSheet, Linking } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import Icon from "react-native-vector-icons/FontAwesome"; 
+import { FontAwesome } from "@expo/vector-icons";
 import styles from "../styles/styleQuiz";
 
 type RootStackParamList = {
@@ -53,7 +53,7 @@ const ResultScreen: React.FC<Props> = ({ route, navigation }) => {
       
       <View style={localStyles.whatsappContainer}>
         <TouchableOpacity onPress={handleWhatsApp}>
-          <Icon name="whatsapp" size={35} color="#25D366" />
+          <FontAwesome name="whatsapp" size={40} color="green" />
         </TouchableOpacity>
       </View>
 
