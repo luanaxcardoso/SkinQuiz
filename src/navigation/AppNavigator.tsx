@@ -13,26 +13,28 @@ export type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const AppNavigator: React.FC = () => (
-  <NavigationContainer testID="navigation-container">
-    <Stack.Navigator initialRouteName="Intro" id={undefined}>
-      <Stack.Screen 
-        name="Intro" 
-        component={IntroScreen} 
-        options={{ headerShown: false }} 
-      />
-      <Stack.Screen 
-        name="Quiz" 
-        component={QuizScreen} 
-        options={{ headerShown: false }} 
-      />
-      <Stack.Screen 
-        name="Result" 
-        component={ResultScreen} 
-        options={{ headerShown: false }} 
-      />
-    </Stack.Navigator>
-  </NavigationContainer>
-);
+const AppNavigator: React.FC = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Intro" id={undefined}>
+        <Stack.Screen
+          name="Intro"
+          component={IntroScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Quiz"
+          component={QuizScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Result"
+          component={ResultScreen}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
 export default AppNavigator;
