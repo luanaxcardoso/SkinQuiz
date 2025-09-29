@@ -6,6 +6,12 @@
 - Leticia Ramiro Abreu (RA: 24001834)  
 - Luana Cardoso (RA: 1012023100720)  
 
+## 📄 Relatório Técnico e de Testes
+
+O **relatório técnico** detalha a implementação, os testes funcionais, de integração e de usabilidade realizados no SkinQuiz.  
+
+[Abrir Relatório Técnico e de Testes](https://github.com/luanaxcardoso/SkinQuiz/raw/main/RELAT%C3%93RIO%20TECNICO%20E%20DE%20TESTES%20PI.pdf)
+
 ## 📱 Sobre o Projeto
 
 **SkinQuiz** é um aplicativo mobile feito em **React Native + Expo** para identificar o tipo de pele do usuário através de um quiz, auxiliando esteticistas no atendimento.
