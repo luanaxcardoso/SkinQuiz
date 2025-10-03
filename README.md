@@ -14,7 +14,7 @@ O **relatório técnico** detalha a implementação, os testes funcionais, de in
 
 ## 📱 Sobre o Projeto
 
-**SkinQuiz** é um aplicativo mobile feito em **React Native + Expo** para identificar o tipo de pele do usuário através de um quiz, auxiliando esteticistas no atendimento.
+O **SkinQuiz** é um aplicativo mobile feito em **React Native + Expo** para identificar o tipo de pele do usuário através de um quiz, auxiliando esteticistas no atendimento.
 
 Este projeto foi desenvolvido para a Clínica La Belle, com o objetivo de oferecer um recurso prático para avaliação inicial do tipo de pele dos clientes.
 
